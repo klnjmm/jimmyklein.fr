@@ -1,0 +1,35 @@
+.post p {
+    @apply py-2;
+}
+
+.post ul {
+    @apply p-2 m-2 list-disc;
+}
+
+.post ol {
+    @apply p-2 m-2 list-decimal;
+}
+
+.post a {
+    @apply underline;
+}
+
+.post blockquote {
+    @apply text-gray-600 px-4 text-lg border-gray-500 border-l-2 ;
+}
+
+.post h1 {
+    @apply text-xl font-bold text-gray-900 leading-tight mt-4;
+}
+
+.post hr {
+    @apply border my-10 border-gray-200;
+}
+
+.post code[class^=language-] {
+    @apply text-base;
+}
+
+.post pre code[class^=language-] {
+    @apply text-sm;
+}
