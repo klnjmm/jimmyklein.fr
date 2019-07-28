@@ -32,7 +32,7 @@ export default ({ children }) => {
           <div className="flex flex-shrink-0">
             <Link to={`/`} className="flex">
               <img
-                src='./avatar.jpg'
+                src='/avatar.jpg'
                 alt={data.site.siteMetadata.title}
                 title={data.site.siteMetadata.title}
                 className="rounded-full h-10 w-10"
