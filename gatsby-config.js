@@ -10,6 +10,7 @@ module.exports = {
         socials: {
             twitter: "https://twitter.com/frjimmyklein",
             youtube: "https://www.youtube.com/channel/UCflXhhMSwO0UHlBB7hfzP8Q",
+            github: "https://github.com/klnjmm",
         }
     },
     plugins: [

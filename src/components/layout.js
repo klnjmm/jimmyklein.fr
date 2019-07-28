@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
-import { FaTwitter, FaYoutube } from "react-icons/fa"
+import { FaTwitter, FaYoutube, FaGithub } from "react-icons/fa"
 import { Helmet } from "react-helmet";
 
 export default ({ children }) => {
@@ -13,6 +13,7 @@ export default ({ children }) => {
             socials {
               twitter
               youtube
+              github
             }
           }
         }
@@ -57,6 +58,13 @@ export default ({ children }) => {
                 className="text-gray-500 px-1 hover:text-gray-800"
               >
                 <FaYoutube className="inline" />
+              </a>
+              <a
+                  href={data.site.siteMetadata.socials.github}
+                  title="Github Jimmy Klein"
+                  className="text-gray-500 px-1 hover:text-gray-800"
+              >
+                <FaGithub className="inline" />
               </a>
             </span>
           </div>
