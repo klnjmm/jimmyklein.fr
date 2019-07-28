@@ -43,6 +43,9 @@ export default class BlogPostTemplate extends React.Component {
         <Helmet>
           <meta charSet="utf-8"/>
           <meta name="description" content={post.excerpt} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={post.frontmatter.title} />
+          <meta name="twitter:description" content={post.excerpt} />
           <title>{post.frontmatter.title}</title>
         </Helmet>
 
