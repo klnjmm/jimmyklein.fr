@@ -29,33 +29,31 @@ export default ({ children }) => {
         <title>{data.site.siteMetadata.title}</title>
       </Helmet>
       <header className="bg-gray-200 py-4">
-        <div className="flex items-center container mx-auto px-4">
-          <div className="flex flex-shrink-0">
-            <Link to={`/`} className="flex">
-              <img
-                src='/avatar.jpg'
-                alt={data.site.siteMetadata.title}
-                title={data.site.siteMetadata.title}
-                className="rounded-full h-10 w-10"
-              />
-            </Link>
-          </div>
-          <div className="px-4">
-            <Link to={`/`} className="text-2xl text-black font-bold">
-              {data.site.siteMetadata.title}
-            </Link>
-            <span className="px-4 text-2xl">
+        <div className="w-full flex items-baseline justify-between container mx-auto lg:max-w-3xl px-4">
+          <ul className="flex">
+            <li className="mr-6">
+              <Link to={`/commencer-ici`} className="uppercase font-bold text-indigo-700 hover:text-indigo-800 hover:underline tracking-wider">
+                Commencer ici
+              </Link>
+            </li>
+            <li>
+              <Link to={`/`} className="uppercase font-bold tracking-wider text-gray-700 hover:text-gray-800 hover:underline">
+                  Blog
+              </Link>
+            </li>
+          </ul>
+          <p className="text-2xl">
               <a
-                href={data.site.siteMetadata.socials.twitter}
-                title="Twitter @frjimmyklein"
-                className="text-gray-500 px-1 hover:text-gray-800"
+                  href={data.site.siteMetadata.socials.twitter}
+                  title="Twitter @frjimmyklein"
+                  className="text-gray-500 px-1 hover:text-gray-800"
               >
                 <FaTwitter className="inline" />
               </a>
               <a
-                href={data.site.siteMetadata.socials.youtube}
-                title="Youtube Jimmy Klein"
-                className="text-gray-500 px-1 hover:text-gray-800"
+                  href={data.site.siteMetadata.socials.youtube}
+                  title="Youtube Jimmy Klein"
+                  className="text-gray-500 px-1 hover:text-gray-800"
               >
                 <FaYoutube className="inline" />
               </a>
@@ -66,12 +64,14 @@ export default ({ children }) => {
               >
                 <FaGithub className="inline" />
               </a>
-            </span>
-          </div>
+
+          </p>
         </div>
       </header>
 
-      <main className="container mx-auto px-4 mt-2">{children}</main>
+      <main className="container mx-auto lg:max-w-3xl px-4 mt-2 mb-32">
+        {children}
+      </main>
     </div>
   )
 }

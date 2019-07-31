@@ -43,6 +43,24 @@ export default ({ data }) => {
 
   return (
     <Layout>
+      <div className="flex items-center container mx-auto lg:max-w-3xl py-4">
+        <div className="flex flex-shrink-0">
+          <p className="flex">
+            <img
+                src='/avatar.jpg'
+                alt="Jimmy Klein"
+                title="Jimmy Klein"
+
+                className="rounded-full h-10 w-10"
+            />
+          </p>
+        </div>
+        <div className="px-4">
+          <p className="text-2xl text-black font-bold">
+              Jimmy Klein
+          </p>
+        </div>
+      </div>
       <div>{postList}</div>
     </Layout>
   )

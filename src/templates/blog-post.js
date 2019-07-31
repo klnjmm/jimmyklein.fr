@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
-import { FaArrowLeft, FaArrowRight, FaHome } from "react-icons/fa"
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet";
 
@@ -53,8 +53,8 @@ export default class BlogPostTemplate extends React.Component {
           to={"/"}
           className="hover:underline flex items-center text-gray-500 text-base mb-4"
         >
-          <FaHome className="mr-2" />
-          Retour à l'accueil
+          <FaArrowLeft className="mr-2" />
+          Retour au blog
         </Link>
         <div className="post">
           <p className="text-3xl font-bold text-gray-900 leading-none ">
