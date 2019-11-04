@@ -7,7 +7,7 @@ export default class CommencerIci extends React.Component {
     render() {
         return (
             <Layout>
-                <div>
+                <div className="px-4 mb-6 container mx-auto">
                     <p className="mb-2">
                         <img src="/jimmy-bio.jpg" title="Jimmy Klein" alt="Jimmy Klein" className="h-full w-full" />
                     </p>
@@ -19,7 +19,7 @@ export default class CommencerIci extends React.Component {
                         <li className="text-gray-800 mb-2 text-lg pl-4">Je vis près de Lyon</li>
                         <li className="text-gray-800 mb-2 text-lg pl-4">Télétravailleur 4 jours sur 5</li>
                         <li className="text-gray-800 mb-2 text-lg pl-4">Je participe au pôle outil de l'<a href="https://www.afup.org" className="underline">AFUP</a></li>
-                        <li className="text-gray-800 mb-2 text-lg pl-4"><a href="https://twitter.com/frjimmyklein" className="underline">Twitter</a> et <a href="https://www.youtube.com/channel/UCflXhhMSwO0UHlBB7hfzP8Q" className="underline">Youtube</a> addict</li>
+                        <li className="text-gray-800 mb-2 text-lg pl-4"><a href={this.props.data.site.siteMetadata.links.twitter} className="underline">Twitter</a> et <a href={this.props.data.site.siteMetadata.links.youtube} className="underline">Youtube</a> addict</li>
                         <li className="text-gray-800 mb-2 text-lg pl-4">Guitariste dans <a href="http://www.narvalband.com" className="underline">Narval</a></li>
                         <li className="text-gray-800 mb-2 text-lg pl-4">Groupe préféré : <a href="https://www.youtube.com/watch?v=NeQM1c-XCDc" className="underline">Rammstein</a></li>
                         <li className="text-gray-800 mb-2 text-lg pl-4">Le pays que j'ai préféré visité : le Japon</li>
@@ -74,10 +74,26 @@ export default class CommencerIci extends React.Component {
                     <hr className="border border-gray-400 my-6" />
 
                     <h1 className="text-3xl mb-2">Entrez en contact</h1>
-                    <p className="text-gray-800">Si vous voulez me contacter, vous pouvez me retrouver facilement sur <a href="https://twitter.com/frjimmyklein" className="underline">Twitter</a>.<br/>
-                        J'ai ouvert une <a href="https://www.youtube.com/channel/UCflXhhMSwO0UHlBB7hfzP8Q" className="underline">chaîne Youtube</a> où vous pouvez me retrouver et commenter mes vidéos.</p>
+                    <p className="text-gray-800">Si vous voulez me contacter, vous pouvez me retrouver facilement sur <a href={this.props.data.site.siteMetadata.links.twitter} className="underline">Twitter</a>.<br/>
+                        J'ai ouvert une <a href={this.props.data.site.siteMetadata.links.youtube} className="underline">chaîne Youtube</a> où vous pouvez me retrouver et commenter mes vidéos.</p>
                 </div>
             </Layout>
         );
     }
 }
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+        links {
+          twitter
+          youtube
+          github
+          devletter
+        }
+      }
+    }
+  }
+`

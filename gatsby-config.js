@@ -7,10 +7,11 @@
 module.exports = {
     siteMetadata: {
         title: "Jimmy Klein",
-        socials: {
-            twitter: "https://twitter.com/frjimmyklein",
-            youtube: "https://www.youtube.com/channel/UCflXhhMSwO0UHlBB7hfzP8Q",
-            github: "https://github.com/klnjmm",
+        links: {
+            twitter: "http://bit.ly/klnjmmtwitter",
+            youtube: "http://bit.ly/klnjmmyoutube",
+            github: "http://bit.ly/klnjmmgithub",
+            devletter: "http://bit.ly/klnjmmdevletter",
         }
     },
     plugins: [

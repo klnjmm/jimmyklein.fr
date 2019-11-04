@@ -21,7 +21,7 @@ export default class BlogPostTemplate extends React.Component {
           to={previous.fields.slug}
           className="text-xl float-left font-bold hover:underline flex items-center"
         >
-          <FaArrowLeft className="mr-2" /> Précedent
+          <FaArrowLeft className="mr-2" /> Précédent
         </Link>
       )
     }
@@ -48,25 +48,26 @@ export default class BlogPostTemplate extends React.Component {
           <meta name="twitter:description" content={post.excerpt} />
           <title>{post.frontmatter.title}</title>
         </Helmet>
-
-        <Link
-          to={"/"}
-          className="hover:underline flex items-center text-gray-500 text-base mb-4"
-        >
-          <FaArrowLeft className="mr-2" />
-          Retour au blog
-        </Link>
-        <div className="post">
-          <p className="text-3xl font-bold text-gray-900 leading-none ">
-            {post.frontmatter.title}
-          </p>
-          <p className="text-gray-600 text-sm mb-4">{toDisplay}</p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr />
-        </div>
-        <div className="mb-6 pb-32">
-          {previousLink}
-          {nextLink}
+        <div className="container mx-auto px-4">
+          <Link
+            to={"/"}
+            className="hidden hover:underline flex items-center text-gray-700 text-base mb-4"
+          >
+            <FaArrowLeft className="mr-2" />
+            Retour au blog
+          </Link>
+          <div className="post text-lg lg:text-xl">
+            <p className="text-3xl font-bold text-gray-900 leading-none ">
+              {post.frontmatter.title}
+            </p>
+            <p className="text-gray-700 text-sm mb-4">{toDisplay}</p>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            <hr />
+          </div>
+          <div className="mb-6 pb-12">
+            {previousLink}
+            {nextLink}
+          </div>
         </div>
       </Layout>
     )
