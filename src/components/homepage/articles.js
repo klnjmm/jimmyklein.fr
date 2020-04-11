@@ -23,14 +23,7 @@ export default props => (
                 node {
                   frontmatter {
                     date
-                    title
-                    cover {
-                      childImageSharp {
-                        sizes(maxWidth: 630) {
-                          ...GatsbyImageSharpSizes
-                        }
-                      }
-                    }
+                    title                  
                   }
                   fields {
                     slug

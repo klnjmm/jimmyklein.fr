@@ -8,11 +8,6 @@ const ArticlesList = props => {
     }
 
     postList = postList.map(({ node }, index) => {
-        /*let cover = null;
-        if (node.frontmatter.cover) {
-            cover = <Img className="h-64 rounded-t-lg" sizes={node.frontmatter.cover.childImageSharp.sizes} />
-        }*/
-
         const options = { year: "numeric", month: "short"}
         const dateparsed = new Date(node.frontmatter.date)
         const toDisplay = dateparsed.toLocaleDateString("fr-FR", options)
@@ -44,13 +39,6 @@ export default props => (
                   frontmatter {
                     date
                     title
-                    cover {
-                      childImageSharp {
-                        sizes(maxWidth: 630) {
-                          ...GatsbyImageSharpSizes
-                        }
-                      }
-                    }
                   }
                   fields {
                     slug

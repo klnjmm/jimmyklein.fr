@@ -1,4 +1,5 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import { FaPodcast, FaYoutube } from 'react-icons/fa';
 import Layout from '../components/layout';
 
