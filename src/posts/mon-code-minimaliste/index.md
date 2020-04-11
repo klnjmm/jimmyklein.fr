@@ -262,6 +262,15 @@ function canDriveACar(User $user)
 # Conclusion
 Notre pratique évolue au fil des années, avec parfois des bonnes idées, parfois des moins bonnes (mais on s'en aperçoit bien plus tard !). J'espère que cet article vous aura inspiré. Ou peut-être que vous n'êtes pas d'accord ou en phase avec certaines de mes pratiques. Je vous invite à me retrouver sur [Twitter](https://www.twitter.com/frjimmyklein) pour discuter de tout ça !
 
+<div class="bg-blue-100 px-4 py-4 lg:mb-4 mt-4 lg:mt-12">
+        <p class="px-4 py-4">
+        Tu as vu sur Twitter <span class="text-blue-700 font-bold">mes conseils et astuces sur le PHP</span> et tu aimerais les recevoir <span class="text-blue-700 font-bold">directement dans ta boîte mail</span> ?<br/>
+        Ou justement tu n'as pas Twitter (ou tu ne me suis pas encore ^^) et <span class="text-blue-700 font-bold">tu aimerais toi aussi recevoir ces conseils</span> ?<br/><br/>
+        Inscris-toi alors à ma dev letter pour recevoir régulièrement dans ta boîte mail <span class="text-blue-700 font-bold">mes conseils, mes nouveaux articles, des vidéos à voir, des outils à découvrir</span> et encore bien d’autres choses.
+        </p>
+         <a href="http://bit.ly/klnjmmdevletter" class="bg-blue-200 w-full block py-4 px-4 mt-4 font-bold text-blue-700 mb-4 text-center">Je m'inscris</a>
+</div>
+
 ---
 
 # Ressources
